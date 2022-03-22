@@ -9,7 +9,7 @@ const CadetSchema = new mongoose.Schema({
 	unit: String,
 	mos: String,
 	grade: String,
-	age: Integer,
+	age: Number,
 });
 
 const Cadet = mongoose.model('Cadet', CadetSchema);
