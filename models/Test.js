@@ -41,6 +41,10 @@ const TestSchema = new mongoose.Schema({
 	ncoic: String,
 	nciocrank: String,
 	pass: Boolean,
+	owner: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Cadet',
+	},
 });
 
 const Test = mongoose.model('Test', TestSchema);
