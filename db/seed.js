@@ -7,18 +7,9 @@ Test.deleteMany({})
 		console.log('deleted all tests');
 		Cadet.deleteMany({});
 	})
-	.then(() => {
+	.then((newCadet) => {
 		console.log('deleted all cadets');
-		return Cadet.create({
-			last_name: 'Moto',
-			first_name: 'Yugi',
-			middle_initial: 'P',
-			gender: 'M',
-			unit: '42',
-			mos: '32',
-			grade: '22',
-			age: 15,
-		});
+		return Cadet.create('Created new cadet!', newCadet);
 	})
 	.then((cadet) => {
 		console.log('Cadet created', cadet);
