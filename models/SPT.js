@@ -3,7 +3,9 @@ const mongoose = require('../db/connection');
 
 
 const SPTSchema = new mongoose.Schema({
-
+	age: Number,
+	gender: String,
+	points: Number,
 });
 
 const SPT = mongoose.model('SPT', SPTSchema);
