@@ -2,13 +2,14 @@ const express = require('express');
 
 const router = express.Router();
 
-const SPT = require('../models/SPT');
+const PLK = require('../models/PLK');
 
-router.get('/', async (req, res, next) => {
+// routes
+router.get('/', async (res, req, next) => {
 	try {
-		const spt = await SPT.find({});
-		if (spt) {
-			res.json(spt);
+		const plk = await PLK.find({});
+		if (plk) {
+			res.json(plk);
 		} else {
 			res.sendStatus(404);
 		}

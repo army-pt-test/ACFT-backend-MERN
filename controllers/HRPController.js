@@ -2,13 +2,15 @@ const express = require('express');
 
 const router = express.Router();
 
-const SPT = require('../models/SPT');
+const HRP = require('../models/HRP');
+
+// routes
 
 router.get('/', async (req, res, next) => {
 	try {
-		const spt = await SPT.find({});
-		if (spt) {
-			res.json(spt);
+		const hrp = await HRP.find({});
+		if (hrp) {
+			res.json(hrp);
 		} else {
 			res.sendStatus(404);
 		}

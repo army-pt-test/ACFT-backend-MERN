@@ -2,13 +2,14 @@ const express = require('express');
 
 const router = express.Router();
 
-const SPT = require('../models/SPT');
+const MileRun = require('../models/MileRun');
 
+// routes
 router.get('/', async (req, res, next) => {
 	try {
-		const spt = await SPT.find({});
-		if (spt) {
-			res.json(spt);
+		const milerun = await MileRun.find({});
+		if (milerun) {
+			res.json(milerun);
 		} else {
 			res.sendStatus(404);
 		}

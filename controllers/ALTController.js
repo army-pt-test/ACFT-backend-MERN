@@ -2,15 +2,16 @@ const express = require('express');
 
 const router = express.Router();
 
-const SPT = require('../models/SPT');
+const ALT = require('../models/ALT');
 
+// routes
 router.get('/', async (req, res, next) => {
 	try {
-		const spt = await SPT.find({});
-		if (spt) {
-			res.json(spt);
+		const alt = await ALT.find({});
+		if (alt) {
+			res.json(alt);
 		} else {
-			res.sendStatus(404);
+			res.sendStatus;
 		}
 	} catch (error) {
 		next(error);
