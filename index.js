@@ -19,6 +19,20 @@ const cadetController = require('./controllers/cadetController');
 app.use('/api/cadets', cadetController);
 const testController = require('./controllers/testController');
 app.use('/api/tests', testController);
+const mdlController = require('./controllers/MDLController');
+app.use('/api/mdl', mdlController);
+const sptController = require('./controllers/SPTController');
+app.use('/api/spt', sptController);
+const sdcController = require('./controllers/SDCController');
+app.use('/api/sdc', sdcController);
+const hrpController = require('./controllers/HRPController');
+app.use('/api/hrp', hrpController);
+const plkController = require('./controllers/PLKController');
+app.use('/api/plk', plkController);
+const milerunController = require('./controllers/MileRunsController');
+app.use('/api/milerun', milerunController);
+const altController = require('./controllers/ALTController');
+app.use('/api/alt', altController);
 
 app.listen((err, req, res, next) => {
 	const statusCode = res.statusCode || 500;
